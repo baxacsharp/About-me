@@ -8,7 +8,7 @@ const contactUs = (data) => {
         type: "SET_LOADING",
         payload: true,
       })
-      const response = await axios.post(endpoint + "contact", { ...data })
+      const response = await axios.post(endpoint + "/contact", { ...data })
       if (response) {
         dispatch({ type: "SET_CONTACT", payload: response.data })
         window.location.assign("https://about-me-orcin.vercel.app/")
