@@ -13,7 +13,7 @@ const Footer = () => {
 
                     <a href='https://github.com/baxacsharp'><img src='/image/github.png' /></a>
 
-                    <a href='baxtiyor.abduvoitov.2000@gmail.com'> <img src='/image/email.png' /></a>
+                    <a href='mailto: baxtiyor.abduvoitov.2000@gmail.com'> <img src='/image/email.png' /></a>
 
 
                 </Col>
