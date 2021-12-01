@@ -52,15 +52,19 @@ export default Contact
 const animatedH2 = keyframes`${wobble}`
 
 const StyledCol = styled(Col)`
+@media only screen and (min-width:700px){
 max-width: 700px !important;
 justify-content: center !important;
 margin-left: 180px;
+}
 `
 const StyledButton = styled(Button)`
+@media only screen and (min-width:700px){
 margin-top: 30px;
     margin-left: 230px;
     justify-content: center !important;
     width: 200px;
+}
     :hover{
         background:  #52d42a !important;
         box-shadow: 0 0 10px #2196f3, 0 0 40px #4ec23f, 0 0 10px #0bd397 !important;

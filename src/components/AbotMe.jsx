@@ -12,10 +12,10 @@ const About = () => {
     return (
         <StyledDiv id='aboutMe' >
             <Row>
-                <Col xs={6}>
+                <Col md={6}>
                     <StyledImage src="/image/PngItem_5017607.png" roundedCircle />
                 </Col>
-                <Col xs={6}>
+                <Col md={6}>
                     <Row>
                         <Col xs={12} >
 
@@ -28,7 +28,7 @@ const About = () => {
                             </StyledSkills>
                         </Col>
 
-                        <StyledCol xs={6} id='whyMe'>
+                        <StyledCol md={6} id='whyMe'>
                             <h2>Why Me</h2>
 
                             <div className='d-flex '>
@@ -74,7 +74,12 @@ const StyledSkills = styled.div`
 `
 
 const StyledDiv = styled(Container)`
-margin-top: 20px;
+     @media only screen and (min-width: 700px) {
+         margin-top: 20px;
+     }
+     @media only screen and (max-width:700px){
+         margin-top:70px;
+     }
     & p{
         color: white;
     }
@@ -89,8 +94,14 @@ margin-top: 20px;
     }
 `
 const StyledImage = styled(Image)`
+ @media only screen and (min-width: 700px) {
 width: 400px;
-height:400px
+height:400px;
+ }
+ @media only screen and (max-width: 700px){
+     width:250px;
+     height:250px
+ }
 `
 const StyledCol = styled(Col)`
     & h2 {

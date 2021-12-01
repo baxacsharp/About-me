@@ -8,3 +8,8 @@ const Card = () => {
     )
 }
 export default Card
+    // const StyledImage = styled(Image)`
+    // @media only screen and (max-width:700px){
+    // width: 100px;
+    // height: 100px;
+    // }

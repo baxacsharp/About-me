@@ -58,20 +58,20 @@ const StyledNavbar = styled(Navbar)`
 background-color: black;
 `
 const StyledButton = styled(Button)`
-
+@media only screen and (max-width:600px){
     :hover{
         background:  #52d42a !important;
         box-shadow: 0 0 10px #2196f3, 0 0 40px #4ec23f, 0 0 10px #0bd397 !important;
       
     }
-    
+}
 `
 
 const StyledNav = styled(Nav.Link)`
-display: flex !important;
-justify-content: center !important;
 color: white !important;
 font-weight: bolder;
+display: flex !important;
+justify-content: center !important;
 :hover{
     background: #7ed957;
     transform: translate(0.8em, -0.8em);
@@ -117,4 +117,5 @@ font-weight: bolder;
     transform: skewY(-45deg);
     --webkit-transform:skewY(-45deg)
 }
+
 `

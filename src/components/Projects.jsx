@@ -99,10 +99,12 @@ const styledCard = keyframes`${zoomInUp}`
 const styledButton = keyframes`${bounce}`
 
 const StyledCard = styled(Card)`
-display: flex;
+@media only screen and (min-width:700px){
 margin-left: 10px;
 height: 500px;
 width: 450px !important;
+}
+display: flex;
 border: 1px solid #7ed957;
 background-color: black;
 :hover{

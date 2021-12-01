@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <StyledContainer fluid>
             <Row>
-                <Col xs={6}>
+                <Col md={6}>
 
                     <a href='https://www.linkedin.com/in/baxtiyor-abduvoitov/'> <img src='/image/linkedin (1).png' /></a>
 
@@ -17,7 +17,7 @@ const Footer = () => {
 
 
                 </Col>
-                <Col xs={6}>
+                <Col md={6}>
                     <h4>2021 @All rights reserved || <span>Bakhtiyor Abdivaitov</span></h4>
                 </Col>
             </Row>
@@ -29,7 +29,9 @@ export default Footer
 const StyledContainer = styled(Container)`
 background-color: #1a1818;
 margin-top: 20px;
+@media only screen and (min-width:700px){
 height: 150px;
+}
 
     & img{
         margin-top: 50px;

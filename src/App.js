@@ -8,10 +8,11 @@ import Projects from "./components/Projects"
 import Footer from "./components/Footer"
 import styled from "styled-components"
 function App() {
+  const isMobile = window.screen.width < 600
   return (
     <StyledDiv>
       <NavBar />
-      <Card />
+      {!isMobile && <Card />}
       <AboutMe />
       <Projects />
       <Contact />
@@ -24,4 +25,9 @@ export default App
 
 const StyledDiv = styled.div`
   background-color: black;
+`
+const StyledCard = styled(Card)`
+  @media only screen and (max-width: 700px) {
+    display: none !important;
+  }
 `
