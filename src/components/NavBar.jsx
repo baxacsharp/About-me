@@ -4,7 +4,7 @@ import { saveAs } from 'file-saver'
 import styled from "styled-components"
 const NavBar = () => {
     const saveFile = () => {
-        saveAs(process.env.REACT_APP_BACKEND_URL + "/Bakhtiyor-Abdivaitov_CV.pdf", 'Bakhtiyor-Abdivaitov_CV.pdf')
+        saveAs(process.env.REACT_APP_BACKEND_URL + "/Bakhtiyor_Abdivaitov_CV.pdf", 'Bakhtiyor_Abdivaitov_CV.pdf')
     }
     return (
         <StyledNavbar fixed="top" variant="dark">
@@ -37,7 +37,7 @@ const NavBar = () => {
                     ><StyledNav href="#pricing">Contact</StyledNav></Link>
                 </Nav>
                 <Nav>
-                    <StyledNav href="/Bakhtiyor-Abdivaitov_CV.pdf">
+                    <StyledNav href="/Bakhtiyor_Abdivaitov_CV.pdf">
                         <StyledButton variant="outline-primary" type='submit' >Resume</StyledButton>
 
                     </StyledNav>
