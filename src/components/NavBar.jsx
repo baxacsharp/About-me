@@ -4,7 +4,7 @@ import { saveAs } from 'file-saver'
 import styled from "styled-components"
 const NavBar = () => {
     const saveFile = () => {
-        saveAs(process.env.REACT_APP_BACKEND_URL + "/Bakhtiyor-Abdivaitov-Cv.pdf", 'Baxtiyor-Abdivaitov-Cv.pdf')
+        saveAs(process.env.REACT_APP_BACKEND_URL + "/Bakhtiyor_Abdivaitov_CV.pdf", 'Bakhtiyor_Abdivaitov_CV.pdf')
     }
     return (
         <StyledNavbar fixed="top" variant="dark">
@@ -37,8 +37,8 @@ const NavBar = () => {
                     ><StyledNav href="#pricing">Contact</StyledNav></Link>
                 </Nav>
                 <Nav>
-                    <StyledNav href="/Bakhtiyor-Abdivaitov-Cv.pdf">
-                        <StyledButton variant="outline-primary" type='submit' >Resume</StyledButton>
+                    <StyledNav href="/Bakhtiyor_Abdivaitov_CV.pdf">
+                        <StyledButton type='submit' >Resume</StyledButton>
 
                     </StyledNav>
 
@@ -58,9 +58,12 @@ const StyledNavbar = styled(Navbar)`
 background-color: black;
 `
 const StyledButton = styled(Button)`
+color:white;
+border: 2px solid #52d42a;
+background-color:black;
 @media only screen and (max-width:600px){
     :hover{
-        background:  #52d42a !important;
+        background:  black !important;
         box-shadow: 0 0 10px #2196f3, 0 0 40px #4ec23f, 0 0 10px #0bd397 !important;
       
     }

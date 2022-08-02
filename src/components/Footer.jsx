@@ -7,10 +7,6 @@ const Footer = () => {
                 <Col md={6}>
 
                     <a href='https://www.linkedin.com/in/baxtiyor-abduvoitov/'> <img src='/image/linkedin (1).png' /></a>
-
-                    <a href='https://www.facebook.com/baxtiyor.abduvoitov.7/'><img src='/image/facebook (1).png' /></a>
-
-
                     <a href='https://github.com/baxacsharp'><img src='/image/github.png' /></a>
 
                     <a href='mailto: baxtiyor.abduvoitov.2000@gmail.com'> <img src='/image/email.png' /></a>
@@ -18,7 +14,7 @@ const Footer = () => {
 
                 </Col>
                 <Col md={6}>
-                    <h4>2021 @All rights reserved || <span>Bakhtiyor Abdivaitov</span></h4>
+                    <h4>2022 @All rights reserved || <span>Bakhtiyor Abdivaitov</span></h4>
                 </Col>
             </Row>
         </StyledContainer>

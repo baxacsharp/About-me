@@ -8,11 +8,10 @@ import Projects from "./components/Projects"
 import Footer from "./components/Footer"
 import styled from "styled-components"
 function App() {
-  const isMobile = window.screen.width < 600
   return (
     <StyledDiv>
       <NavBar />
-      {!isMobile && <Card />}
+      <Card />
       <AboutMe />
       <Projects />
       <Contact />

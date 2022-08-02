@@ -14,7 +14,7 @@ const Projects = () => {
             Link: 'https://ecom-frontend-nu.vercel.app/',
             Title: 'BaxShop',
             Description: "Baxshop, E-commerce website dedicated to sport items which you can sell or buy products based on your Role.",
-            Tools: 'Frontend: React JS, Redux, Styled-Components, React-Bootstrap,SASS, axios,Reactstrap, Backend:Express, Node JS, Mongo DB, Authentication/Authorization, SendGrid for sending emails, Cloudinary for saving Images ',
+            Tools: 'Front-End: React JS, Redux, Styled-Components, React-Bootstrap, SASS, Axios, Reactstrap, Back-End: Express, Node JS, MongoDB, Authentication/Authorization, SendGrid for sending emails, Cloudinary for saving images.',
             GithubFrontend: 'https://github.com/baxacsharp/baxshop-frontend',
             GithubBackend: 'https://github.com/baxacsharp/baxshop-backend'
 
@@ -23,16 +23,16 @@ const Projects = () => {
             imageUrl: '/image/Screenshot (109).png',
             Link: 'https://weather-app-typescript-rouge.vercel.app/',
             Title: 'Bax-Weather-App-Typescript',
-            Description: "Fully functional Weather app using typescript and Rest API from OpenWeather.",
-            Tools: 'React JS, Typescript, Rest Api, Styled-Components , React-Bootstrap',
+            Description: "Fully functional Weather app using TypeScript and Rest API from OpenWeather.",
+            Tools: 'React JS, TypeScript, Rest Api, Styled-Components , React-Bootstrap',
             GithubFrontend: 'https://github.com/baxacsharp/weather-app-Typescript'
         },
         {
             imageUrl: '/image/Screenshot (113).png',
             Link: "https://whatsapp-frontend-omega.vercel.app/",
-            Title: 'Whatsapp-Clone',
-            Description: 'Whatsapp-Clone By using  SocketIo. Real-chat Application.',
-            Tools: 'Frontend: SocketIo, React Js, Redux, React-Bootstrap, Styled-Components, Axios, simple-peer,  Backend: Express, Node JS, Mongo DB, SocketIO, Authentication/Authorization',
+            Title: 'WhatsApp-Clone',
+            Description: 'WhatsApp-Clone By using  SocketIO Real-chat Application.',
+            Tools: 'Front-End: SocketIO, React JS, Redux, React-Bootstrap, Styled-Components, Axios, Simple-peer,  Back-End: Express, Node JS, MongoDB, SocketIO, Authentication/Authorization',
             GithubFrontend: 'https://github.com/baxacsharp/Whatsapp-frontend',
             GithubBackend: 'https://github.com/baxacsharp/Whatsapp-backend'
         },
@@ -40,22 +40,22 @@ const Projects = () => {
             imageUrl: 'https://d33wubrfki0l68.cloudfront.net/615ad4590e0b48ccb3be4a6f/screenshot_2021-10-04-10-15-59-0000.png',
             Link: 'https://bax-music.netlify.app',
             Title: 'Bax-Music',
-            Description: 'Bax-Music, Musical-application where you can search for the music or album, and Listen for some of the songs that has in our database. ',
-            Tools: 'Html 5, CSS 3, Javascript, Rest API',
+            Description: 'Bax-Music, Musical-application where you can search for your favourite albums and songs, and listen to songs that has in our database. ',
+            Tools: 'HTML 5, CSS 3, Javascript, Rest API',
             GithubFrontend: 'https://github.com/baxacsharp/Spotify-Html'
 
         }]
     return (
         <div id='projects' data-aos='fade-up'>
             <StyledH2 >A little piece from my work</StyledH2>
-            <Row style={{ marginTop: '10px', maxWidth: '1020px' }} xs={1} md={2} className="g-4">
+            <StyledRow style={{ marginTop: '10px' }} xs={1} md={1} lg={2} >
                 {Projects.map((project) => (
                     <Col>
 
                         <StyledCard className='card' >
-                            <Card.Body style={{ display: 'flex', flexWrap: 'wrap' }}>
-                                <div style={{ height: '425px' }} >
-                                    <Card.Img variant="top" src={project.imageUrl} />
+                            <Card.Body >
+                                <div>
+                                    <StyledCardImg variant="top" src={project.imageUrl} />
 
                                     <StyledTitle>{project.Title}</StyledTitle>
                                     <Card.Text style={{ color: 'white' }}>
@@ -67,28 +67,28 @@ const Projects = () => {
 
                                     </StyledCardText>
                                 </div>
-
-                                <a href={project.GithubFrontend}><StyledButton variant='outline-primary'>
-                                    {project.GithubBackend ? 'Github Frontend' : 'Frontend'}
-                                </StyledButton> </a>
-                                {project.GithubBackend && (
-                                    <a href={project.GithubBackend}>
-                                        <StyledButton variant='outline-primary'>
-                                            Github Backend
-                                        </StyledButton>
+                                <StyledDiv>
+                                    <a href={project.GithubFrontend}><StyledButton >
+                                        {project.GithubBackend ? 'Front-End' : 'Front-End'}
+                                    </StyledButton> </a>
+                                    {project.GithubBackend && (
+                                        <a href={project.GithubBackend}>
+                                            <StyledButton >
+                                                Back-End
+                                            </StyledButton>
+                                        </a>
+                                    )}
+                                    <a href={project.Link}> <StyledButton >
+                                        Website
+                                    </StyledButton>
                                     </a>
-                                )}
-                                <a href={project.Link}> <StyledButton variant='outline-primary'>
-                                    Website
-                                </StyledButton>
-                                </a>
-
+                                </StyledDiv>
                             </Card.Body>
                         </StyledCard>
 
                     </Col>
                 ))}
-            </Row>
+            </StyledRow>
         </div>
     )
 }
@@ -97,20 +97,38 @@ export default Projects
 const animatedH2 = keyframes`${flip}`
 const styledCard = keyframes`${zoomInUp}`
 const styledButton = keyframes`${bounce}`
-
+const StyledRow = styled(Row)`
+--bs-gutter-x:0px;
+`
+const StyledCardImg = styled(Card.Img)`
+    height:360px;
+    @media only screen and (max-width:530px){
+        height:auto;
+    }
+`
+const StyledDiv = styled.div`
+position:absolute;
+bottom:0;
+display:flex;
+align-items:space-between;
+`
 const StyledCard = styled(Card)`
-@media only screen and (min-width:700px){
-margin-left: 10px;
-height: 500px;
-width: 450px !important;
-}
-display: flex;
+height:630px ;
+margin-bottom:10px;
+margin-left:10px;
 border: 1px solid #7ed957;
 background-color: black;
+
+
+    & Card.Img{
+        @media only screen and (max-width:530px){
+            height:auto;
+        }
+    }
 :hover{
         box-shadow: 0 0 10px white, 0 0 40px white, 0 0 10px white !important;
         fill-opacity:#7ed957;
-        background-color:#7ed957 !important;
+        
     }
   
 `
@@ -123,11 +141,13 @@ font-weight:bolder;
 `
 
 const StyledButton = styled(Button)`
-margin-bottom:10px !important;
+color:white;
+border: 2px solid #52d42a;
+background-color:black;
 animation: 2s ${styledButton};
 margin-right: 5px;
   :hover{
-        background:  #52d42a !important;
+        background-color:black;
         box-shadow: 0 0 10px #2196f3, 0 0 40px #4ec23f, 0 0 10px #0bd397 !important;
 
     }

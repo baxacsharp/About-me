@@ -20,11 +20,11 @@ const About = () => {
                         <Col xs={12} >
 
                             <h2 data-aos='fade-right' >About Me</h2>
-                            <p>Hello, My name is Bakhtiyor Abdivaitov,<span> FULL-STACK DEVELOPER</span> living in a web development environment,currently studying in <span>IT department</span> in the University</p>
-                            <p>My job is to build fully functional and amazing websites that can inspire clients who are visiting the website</p>
+                            <p>Hello, my name is Bakhtiyor Abdivaitov, FULL-STACK DEVELOPER living in a web development environment,currently studying in IT department in the University.</p>
+                            <p>My job is to build fully functional and amazing websites that can inspire clients who are visiting the website.</p>
                             <StyledSkills className='box'>
                                 <h2>Skills</h2>
-                                <p>Javascript, HTML5, CSS3, ES6, REST API, Socket, Jest Test, Typescript,React Js,Node JS, Express, MongoDB, MYSQL, REDUX, SASS, SENDGRID, Streams, Authorization/Authentication, OAuth. </p>
+                                <p>JavaScript, HTML5, CSS3, ES6, REST API, SocketIO, Jest Test, TypeScript, React.JS, Node.JS, Express, MongoDB, MYSQL, Redux, SASS, SendGrid, Streams, Authorization/Authentication, OAuth. </p>
                             </StyledSkills>
                         </Col>
 
@@ -32,23 +32,23 @@ const About = () => {
                             <h2>Why Me</h2>
 
                             <div className='d-flex '>
-                                <img src='/image/correction.png' />
+                                <SoftSImg src='/image/correction.png' />
                                 <p>Passionate for Coding</p>
                             </div>
                             <div className='d-flex'>
-                                <img src='/image/correction.png' />
+                                <SoftSImg src='/image/correction.png' />
                                 <p>Problem Solver</p>
                             </div>
                             <div className='d-flex'>
-                                <img src='/image/correction.png' />
+                                <SoftSImg src='/image/correction.png' />
                                 <p>Ability to work in a team</p>
                             </div>
                             <div className='d-flex'>
-                                <img src='/image/correction.png' />
-                                <p>Willingnes to learn</p>
+                                <SoftSImg src='/image/correction.png' />
+                                <p>Willingness to learn</p>
                             </div>
                             <div className='d-flex'>
-                                <img src='/image/correction.png' />
+                                <SoftSImg src='/image/correction.png' />
                                 <p>Coming up with ideas</p>
                             </div>
 
@@ -72,10 +72,13 @@ const StyledSkills = styled.div`
 
     
 `
-
+const SoftSImg = styled.img`
+width:24px;
+height:29px;
+`
 const StyledDiv = styled(Container)`
      @media only screen and (min-width: 700px) {
-         margin-top: 20px;
+         margin-top: 70px;
      }
      @media only screen and (max-width:700px){
          margin-top:70px;
@@ -104,6 +107,7 @@ height:400px;
  }
 `
 const StyledCol = styled(Col)`
+    width:100% ;
     & h2 {
         animation: 2s ${bounceAnimateH2};
     }

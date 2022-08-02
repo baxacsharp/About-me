@@ -28,19 +28,21 @@ function Contact() {
                     <StyledForm data-Aos='flip-right' onSubmit={(e) => handleSubmit(e)}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <StyledLabel>Email address</StyledLabel>
-                            <Form.Control type="email" placeholder="Enter email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                            <StyledFormControl type="email" placeholder="Enter email" value={email} onChange={(e) => setEmail(e.target.value)} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicName">
                             <StyledLabel>Your Name</StyledLabel>
-                            <Form.Control type="text" placeholder="Enter your name or Company name" value={name} onChange={(e) => setName(e.target.value)} />
+                            <StyledFormControl type="text" placeholder="Enter your name or Company name" value={name} onChange={(e) => setName(e.target.value)} />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="text">
                             <StyledLabel>Message</StyledLabel>
-                            <Form.Control as="textarea" rows={3} type="text" placeholder="Text me" value={message} onChange={(e) => setMessage(e.target.value)} />
+                            <StyledFormControl as="textarea" rows={3} type="text" placeholder="Text me" value={message} onChange={(e) => setMessage(e.target.value)} />
                         </Form.Group>
-                        <StyledButton variant="outline-primary" type="submit" size="lg">
-                            Submit
+                        <StyledButton type="submit" size="lg">
+                            <span>
+                                Submit
+                            </span>
                         </StyledButton>
                     </StyledForm>
                 </StyledCol>
@@ -50,23 +52,28 @@ function Contact() {
 }
 export default Contact
 const animatedH2 = keyframes`${wobble}`
+const StyledFormControl = styled(Form.Control)`
+width:97%;
+margin-left:5px;
+`
 
 const StyledCol = styled(Col)`
-@media only screen and (min-width:700px){
-max-width: 700px !important;
+@media only screen and (min-width:900px){
 justify-content: center !important;
-margin-left: 180px;
+
 }
 `
 const StyledButton = styled(Button)`
+color:white;
+border: 2px solid #52d42a;
+background-color:black;
 @media only screen and (min-width:700px){
-margin-top: 30px;
-    margin-left: 230px;
+    margin-top: 30px;
     justify-content: center !important;
     width: 200px;
 }
     :hover{
-        background:  #52d42a !important;
+        background: black;
         box-shadow: 0 0 10px #2196f3, 0 0 40px #4ec23f, 0 0 10px #0bd397 !important;
       
     }
